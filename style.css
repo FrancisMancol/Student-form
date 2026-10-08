@@ -1,0 +1,367 @@
+/* ── Reset & Base ── */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+  min-height: 100vh;
+}
+
+/* ── Landing Page ── */
+#landingPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0d1117 0%, #0f2027 50%, #0a3d1f 100%);
+}
+
+.landing-bg-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.12;
+}
+
+.s1 {
+  width: 500px;
+  height: 500px;
+  background: #0a7d32;
+  top: -120px;
+  right: -100px;
+}
+
+.s2 {
+  width: 300px;
+  height: 300px;
+  background: #1a6fff;
+  bottom: -80px;
+  left: -60px;
+}
+
+.s3 {
+  width: 200px;
+  height: 200px;
+  background: #00ff7f;
+  top: 55%;
+  right: 15%;
+}
+
+.landing-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 600px;
+}
+
+.landing-badge {
+  display: inline-block;
+  background: rgba(10, 125, 50, 0.25);
+  border: 1px solid #0a7d32;
+  color: #00ff7f;
+  font-size: 13px;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.landing-title {
+  font-size: 52px;
+  font-weight: bold;
+  color: #e6edf3;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.landing-title span {
+  color: #00ff7f;
+}
+
+.landing-sub {
+  color: #8b949e;
+  font-size: 17px;
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+.landing-cta {
+  background: #0a7d32;
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.landing-cta:hover {
+  background: #0c9940;
+  transform: translateY(-2px);
+}
+
+/* ── Header ── */
+.header {
+  background: rgba(13, 17, 23, 0.95);
+  border-bottom: 1px solid #21262d;
+  padding: 14px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  color: #00ff7f;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.menu a {
+  margin: 0 14px;
+  text-decoration: none;
+  color: #8b949e;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.menu a:hover {
+  color: #00ff7f;
+}
+
+/* ── Main App Layout ── */
+#mainApp {
+  background: #0d1117;
+  min-height: calc(100vh - 57px);
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ── Sidebar ── */
+.activitiesBox {
+  width: 260px;
+  min-width: 220px;
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 14px;
+  padding: 20px;
+  display: none;
+}
+
+.sidebar-title {
+  font-size: 14px;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.folder {
+  background: #1c2128;
+  border-left: 4px solid #0a7d32;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e6edf3;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.folder:hover {
+  background: #243029;
+  transform: translateX(4px);
+}
+
+.activitiesBox ul {
+  list-style: none;
+  padding: 0 0 0 12px;
+  margin: 0 0 6px;
+}
+
+.activitiesBox li {
+  margin: 8px 0;
+  cursor: pointer;
+  font-size: 13px;
+  color: #8b949e;
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15px;
+}
+
+.activitiesBox li:hover {
+  background: #1c2128;
+  color: #00ff7f;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ── Display Box ── */
+.displayBox {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Home box */
+.homeBox {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 14px;
+  padding: 50px 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.homeBox h2 {
+  color: #00ff7f;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.homeBox p {
+  color: #8b949e;
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+/* Info box (About) */
+.infoBox {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-left: 5px solid #0a7d32;
+  border-radius: 14px;
+  padding: 30px 36px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #c9d1d9;
+}
+
+.infoBox h2 {
+  margin-top: 0;
+  color: #00ff7f;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.infoBox p {
+  margin: 6px 0;
+}
+
+.infoBox strong {
+  color: #e6edf3;
+}
+
+/* Console / output area */
+.console {
+  background: #0d1117;
+  border: 1px solid #21262d;
+  color: #00ff7f;
+  padding: 30px;
+  border-radius: 14px;
+  white-space: pre-wrap;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 80px;
+  font-family: 'Courier New', monospace;
+}
+
+/* ── Grade Calculator (Exercise 4) ── */
+.console input[type="number"],
+.console input[type="text"],
+.console input:not([type]) {
+  background: #1c2128;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 4px 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.console input:focus {
+  border-color: #0a7d32;
+}
+
+/* ── Buttons inside activities ── */
+.btn {
+  background: #0a7d32;
+  color: white;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 6px 4px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #0c9940;
+}
+
+input[type="text"],
+input[type="number"],
+input:not([type]) {
+  background: #1c2128;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 4px 0;
+  outline: none;
+}
+
+input:focus {
+  border-color: #0a7d32;
+}
+
+ul#listArea,
+ul#todoList {
+  text-align: left;
+  color: #c9d1d9;
+  padding-left: 20px;
+  margin-top: 12px;
+}
+
+ul#listArea li,
+ul#todoList li {
+  margin: 6px 0;
+  font-size: 15px;
+}
