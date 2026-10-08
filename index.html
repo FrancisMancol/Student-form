@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header" id="mainHeader" style="display:none;">
+    <div class="header-inner">
+      <span class="header-logo">⚡ JS Portfolio</span>
+      <nav class="menu" id="mainNav">
+        <a onclick="goHome()">Home</a>
+        <a onclick="goAbout()">About</a>
+        <a onclick="showActivities()">Activities</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- LANDING PAGE -->
+  <div id="landingPage">
+    <div class="landing-content">
+      <div class="landing-badge">JavaScript Portfolio</div>
+      <h1 class="landing-title">Learn JavaScript<br/><span>Interactively</span></h1>
+      <p class="landing-sub">Hands-on exercises covering core JS concepts — from variables to DOM manipulation.</p>
+      <button class="landing-cta" id="landingClickMe">Click Me to Enter ➜</button>
+    </div>
+    <div class="landing-bg-shapes">
+      <div class="shape s1"></div>
+      <div class="shape s2"></div>
+      <div class="shape s3"></div>
+    </div>
+  </div>
+
+  <!-- MAIN APP -->
+  <div id="mainApp" style="display:none;">
+    <div class="container">
+
+      <!-- SIDEBAR -->
+      <div class="activitiesBox" id="sidebar">
+        <div class="sidebar-title">📚 Exercises</div>
+
+        <div class="folder" onclick="toggleExercise2()">📁 Exercise 2</div>
+        <ul id="exercise2List" class="hidden">
+          <li onclick="showActivity(1)">Activity 1 – Hello JS</li>
+          <li onclick="showActivity(2)">Activity 2 – Variables</li>
+          <li onclick="showActivity(3)">Activity 3 – Arithmetic</li>
+          <li onclick="showActivity(4)">Activity 4 – Alert &amp; Prompt</li>
+          <li onclick="showActivity(5)">Activity 5 – Conditionals</li>
+          <li onclick="showActivity(6)">Activity 6 – Loops</li>
+          <li onclick="showActivity(7)">Activity 7 – Button Event</li>
+        </ul>
+
+        <div class="folder" onclick="toggleExercise3()">📁 Exercise 3</div>
+        <ul id="exercise3List" class="hidden">
+          <li onclick="showActivity(8)">Activity 1 – Background Color</li>
+          <li onclick="showActivity(9)">Activity 2 – Dark Mode</li>
+          <li onclick="showActivity(10)">Activity 3 – Add List Item</li>
+          <li onclick="showActivity(11)">Activity 4 – Remove Element</li>
+          <li onclick="showActivity(12)">Activity 5 – Char Counter</li>
+          <li onclick="showActivity(13)">Activity 6 – Add Numbers</li>
+          <li onclick="showActivity(14)">Activity 7 – Change Image</li>
+          <li onclick="showActivity(15)">Activity 8 – To-Do List</li>
+        </ul>
+
+        <div class="folder" onclick="toggleExercise4()">📁 Exercise 4</div>
+        <ul id="exercise4List" class="hidden">
+          <li onclick="showActivity(16)">Activity 1 – Grade Calculator</li>
+        </ul>
+      </div>
+
+      <!-- DISPLAY AREA -->
+      <div class="displayBox">
+        <div id="infoBox" class="infoBox hidden"></div>
+        <div id="homeBox" class="homeBox hidden"></div>
+        <div class="console" id="output"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
